@@ -1,0 +1,121 @@
+
+(rules PCB msx-ppi
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (eu.mihosoft.freerouting.autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 3219)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.3)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.8)
+    )
+  )
+  (rule
+    (width 254.0)
+    (clear 127.2)
+    (clear 127.0 (type smd_to_turn_gap))
+    (clear 31.8 (type smd_smd))
+  )
+  (padstack "Via[0-1]_685.8:330.2_um"
+    (shape
+      (circle F.Cu 685.8 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 685.8 0.0 0.0)
+    )
+    (attach off)
+  )
+  (padstack "Via[0-1]_1270:889_um"
+    (shape
+      (circle F.Cu 1270.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 1270.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_685.8:330.2_um" "Via[0-1]_685.8:330.2_um" default
+  )
+  (via 
+    "Via[0-1]_1270:889_um" "Via[0-1]_1270:889_um" default
+  )
+  (via 
+    "Via[0-1]_685.8:330.2_um-kicad_default" "Via[0-1]_685.8:330.2_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_1270:889_um-kicad_default" "Via[0-1]_1270:889_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_685.8:330.2_um-Power" "Via[0-1]_685.8:330.2_um" Power
+  )
+  (via 
+    "Via[0-1]_1270:889_um-Power" "Via[0-1]_1270:889_um" Power
+  )
+  (via_rule
+    default "Via[0-1]_685.8:330.2_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_685.8:330.2_um-kicad_default"
+  )
+  (via_rule
+    Power "Via[0-1]_1270:889_um-Power"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 254.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    "Net-(Q1-Pad2)" "Net-(Q1-Pad1)" \RESET "Net-(SW1-Pad1)" "Net-(SW1-Pad10)" "Net-(SW1-Pad2)" "Net-(SW1-Pad3)" "Net-(SW1-Pad4)"
+    "Net-(SW1-Pad5)" "Net-(SW1-Pad6)" "Net-(SW1-Pad7)" "Net-(SW1-Pad8)" A5 A6 A7 "Net-(U1-Pad4)"
+    A2 A3 "Net-(U2-Pad13)" A4 \RD \IORQ \BUSDIR \WR
+    "Net-(U2-Pad6)" A1 A0 PA0 PC0 PC1 PA1 PC2
+    PA2 PC3 PA3 PC4 PA4 PC5 PA5 PC6
+    PA6 PC7 PA7 PB3 PB4 PB5 PB6 PB7
+    PB0 PB1 PB2 D7 D6 D5 D4 D3
+    D2 D1 D0 "Net-(P1-Pad1)" "Net-(P1-Pad3)" "Net-(P1-Pad5)" "Net-(P1-Pad7)" "Net-(P1-Pad9)"
+    "Net-(P1-Pad17)" "Net-(P1-Pad19)" "Net-(P1-Pad23)" "Net-(P1-Pad25)" "Net-(P1-Pad49)" "Net-(P1-Pad50)" "Net-(P1-Pad48)" "Net-(P1-Pad42)"
+    "Net-(P1-Pad26)" "Net-(P1-Pad24)" "Net-(P1-Pad20)" "Net-(P1-Pad18)" "Net-(P1-Pad16)" "Net-(P1-Pad12)" "Net-(P1-Pad2)" "Net-(P1-Pad4)"
+    "Net-(P1-Pad6)" "Net-(P1-Pad8)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 254.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class Power
+    VCC GND "Net-(P1-Pad44)"
+    (clearance_class Power)
+    (via_rule Power)
+    (rule
+      (width 762.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
