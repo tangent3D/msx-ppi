@@ -4,9 +4,9 @@ MSX-PPI is an MSX compatible programmable I/O cartridge design based around the 
 ![MSX-PPI cartridge](media/MSX-PPI.jpg "MSX-PPI cartridge")
 
 ### Thanks
-@skiselev for his advice  
+[@skiselev](https://github.com/skiselev) for his advice  
 [xrrawva](http://xrrawva.com/ "xrrawva") for bat graphics and support  
-@apoloval for MSX EEPROM cartridge PCB (used for 02x25 cartridge pins)  
+[@apoloval](https://github.com/apoloval) for MSX EEPROM cartridge PCB (used for 02x25 cartridge pins)  
 Atsushi Seki. "[Putting Together a Standard Interface Board](https://archive.org/stream/MSX_Magazine_1990-07_ASCII_JP#page/n127/mode/1up "Putting Together a Standard Interface Board")" *MSX Magazine*, Jul. 1990, pp. 128-131.  
 
 ### Disclaimer
